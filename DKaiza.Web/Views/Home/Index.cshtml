@@ -1,8 +1,100 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero-section">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-md-6 text-content">
+                <div class="divider"></div>
+                <h1 class="display-4 fw-bold mb-4">Elegancia que Transforma</h1>
+                <p class="lead mb-5">Experimenta el arte de la belleza premium en un espacio diseñado para tu transformación personal.</p>
+                
+                <a asp-controller="Citas" asp-action="Create" class="btn btn-reserve">
+                    RESERVAR MI CITA
+                </a>
+
+                <div class="stats-row mt-5 d-flex justify-content-between">
+                    <div class="stat-item text-center">
+                        <span class="d-block fw-bold h4">+10</span>
+                        <small>AÑOS DE EXPERIENCIA</small>
+                    </div>
+                    <div class="stat-item text-center">
+                        <span class="d-block fw-bold h4">5★</span>
+                        <small>CALIFICACIÓN</small>
+                    </div>
+                    <div class="stat-item text-center">
+                        <span class="d-block fw-bold h4">2K+</span>
+                        <small>CLIENTES SATISFECHOS</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 h-100 d-none d-md-block">
+                <div class="hero-image" style="background-image: url('/images/hero-model.jpg');"></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    /* Aplicando tu paleta de colores */
+    :root {
+        --desert-rock: #A48D78;
+        --soft-sandstone: #CBB9A4;
+        --creamed-oat: #E6DAC8;
+        --porcelain-mist: #F4F1EA;
+        --feather-white: #FAF9F6;
+    }
+
+    body {
+        background-color: var(--feather-white);
+        color: #333;
+        font-family: 'Playfair Display', serif; /* Estilo elegante */
+    }
+
+    .hero-section {
+        height: 80vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .divider {
+        width: 50px;
+        height: 2px;
+        background-color: var(--desert-rock);
+        margin-bottom: 30px;
+    }
+
+    .btn-reserve {
+        background-color: var(--desert-rock);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 8px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        transition: 0.3s;
+        border: none;
+    }
+
+    .btn-reserve:hover {
+        background-color: var(--soft-sandstone);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .hero-image {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 0 0 100px; /* Estilo moderno */
+    }
+
+    .stat-item span {
+        color: var(--desert-rock);
+    }
+
+    .stat-item small {
+        color: #777;
+        letter-spacing: 1px;
+    }
+</style>
